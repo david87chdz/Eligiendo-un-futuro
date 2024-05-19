@@ -1,0 +1,43 @@
+@startuml
+
+actor Usuario
+participant AngularApp
+participant AngularService
+participant SpringBootController
+participant SpringBootService
+participant SpringBootRepository
+database MySQL
+participant Hibernate
+
+User -> AngularApp: Ingresar datos de registro
+activate AngularApp
+AngularApp -> AngularService: Enviar datos de registro
+activate AngularService
+AngularService -> SpringBootController: Enviar datos de registro
+activate SpringBootController
+SpringBootController -> SpringBootService: Enviar datos de registro
+activate SpringBootService
+SpringBootService -> SpringBootRepository: Verificar existencia de usuario
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Consultar base de datos
+activate Hibernate
+Hibernate -> MySQL: Consultar base de datos
+deactivate Hibernate
+SpringBootRepository --> SpringBootService: Usuario no encontrado
+deactivate SpringBootRepository
+SpringBootService -> SpringBootRepository: Guardar usuario en la base de datos
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Guardar usuario en la base de datos
+activate Hibernate
+Hibernate -> MySQL: Guardar usuario en la base de datos
+deactivate Hibernate
+deactivate SpringBootRepository
+SpringBootService --> SpringBootController: Confirmación de registro
+deactivate SpringBootService
+SpringBootController --> AngularService: Confirmación de registro
+deactivate SpringBootController
+AngularService --> AngularApp: Confirmación de registro
+deactivate AngularService
+deactivate AngularApp
+
+@enduml

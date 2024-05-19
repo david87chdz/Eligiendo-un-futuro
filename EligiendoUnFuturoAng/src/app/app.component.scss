@@ -1,0 +1,17 @@
+
+.router-outlet-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 120px); 
+  position: relative;
+  padding-bottom: 50px; 
+  margin-top: 100px; 
+
+}
+
+
+
+app-footer {
+  margin-top: 100px;
+}
+

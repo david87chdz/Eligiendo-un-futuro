@@ -1,0 +1,178 @@
+@startuml
+
+class Actividad {
+    - id: Long
+    - nombre: String
+    - tipo: String
+    - activo: Boolean
+    - ofertas: List<Oferta>
+
+    + Actividad()
+    + Actividad(String, String, Boolean)
+    + addOferta(Oferta): void
+    + removeOferta(Oferta): void
+}
+
+
+
+class Colegio {
+    - id: Long
+    - nombre: String
+    - provincia: String
+    - localidad: String
+    - denominacion: String
+    - naturaleza: String
+    - comedor: Boolean
+    - concierto: Boolean
+    - email: String
+    - web: String
+    - descripcion: String
+    - direccion: String
+    - telefono: String
+    - localizacion: String
+    - codigo: String
+    - activo: Boolean
+    - desactivaciones: Long
+    - imagenes: List<Imagen>
+    - ofertas: List<Oferta>
+    - usuario: Usuario
+    - comentarios: List<Comentario>
+    - valoraciones: List<Valoracion>
+    - respuestas: List<Respuesta>
+
+    + Colegio()
+    + Colegio(Long, String, String, String, String, String, Boolean, Boolean, String, String, String, String, String, List<Imagen>, List<Oferta>, Usuario, List<Comentario>, List<Valoracion>, List<Respuesta>, String, Boolean, Long)
+    + setNombre(String): void
+    + setProvincia(String): void
+    + setLocalidad(String): void
+    + setComedor(Boolean): void
+    + setDenominacion(String): void
+    + setConcierto(Boolean): void
+    + setEmail(String): void
+    + setWeb(String): void
+    + setDescripcion(String): void
+    + setDireccion(String): void
+    + setTelefono(String): void
+    + setImagenes(List<Imagen>): void
+    + setOfertas(List<Oferta>): void
+    + addComentario(Comentario): void
+    + removeComentario(Comentario): void
+    + addValoracion(Valoracion): void
+    + removeValoracion(Valoracion): void
+    + setRespuestas(List<Respuesta>): void
+    + addRespuesta(Respuesta): void
+    + removeRespuesta(Respuesta): void
+    + isActivo(): boolean
+}
+
+
+class Comentario {
+    - id: Long
+    - contenido: String
+    - fecha: LocalDateTime
+    - activo: Boolean
+    - usuario: Usuario
+    - colegio: Colegio
+
+    + Comentario()
+    + Comentario(String, LocalDateTime, Usuario, Colegio, Boolean)
+    + Comentario(String, Usuario, Colegio, Boolean)
+    + setActivo(boolean): void
+}
+
+class Imagen {
+    - id: Long
+    - url: Blob
+    - descripcion: String
+    - colegio: Colegio
+    - activo: Boolean
+
+    + Imagen(String, String, Colegio)
+    + getUrlAsString(): String
+}
+
+
+
+class Oferta {
+    - id: Long
+    - actividad: Actividad
+    - colegio: Colegio
+
+    + Oferta(Actividad, Colegio)
+    + getId(): Long
+    + getActividad(): Actividad
+    + getColegio(): Colegio
+}
+
+
+class Respuesta {
+    - id: Long
+    - contenido: String
+    - fecha: LocalDateTime
+    - comentario: Comentario
+    - colegio: Colegio
+
+    + Respuesta(String, LocalDateTime, Boolean, Comentario, Colegio)
+    + Respuesta(String, Comentario, Boolean, Colegio)
+}
+
+class Rol {
+    - id: Long
+    - tipo: String
+    - usuarios: List<Usuario>
+
+    + Rol()
+    + Rol(String)
+    + addUsuario(Usuario)
+    + removeUsuario(Usuario)
+}
+
+class Usuario {
+    - id: Long
+    - nombre: String
+    - apellidos: String
+    - email: String
+    - password: String
+    - activo: boolean
+    - desactivaciones: long
+    - colegios: Collection<Colegio>
+    - rol: Rol
+    - comentarios: Collection<Comentario>
+    - valoraciones: Collection<Valoracion>
+
+    + Usuario()
+    + Usuario(String, String, String, String, Boolean, long)
+    + addColegio(Colegio)
+    + removeColegio(Colegio)
+    + addComentario(Comentario)
+    + removeComentario(Comentario)
+    + addValoracion(Valoracion)
+    + removeValoracion(Valoracion)
+}
+
+class Valoracion {
+    - id: Long
+    - puntuacion: Integer
+    - fecha: LocalDateTime
+    - usuario: Usuario
+    - colegio: Colegio
+
+    + Valoracion()
+    + Valoracion(Integer, Usuario, Colegio)
+    + getValoracion(): double
+}
+
+ Usuario "1" --> "1" Rol: tiene
+    Usuario "0..1" --> "0..1" Colegio: pertenece a
+    Colegio "1" --> "*" Comentario
+    Colegio "1" --> "*" Valoracion
+    Valoracion "1" --> "1" Usuario: realizada por
+    Valoracion "1" --> "1" Colegio: valoración de
+    Comentario "1" --> "0..1" Respuesta
+    Usuario "1" --> "*" Comentario: escribe
+    Usuario "1" --> "*" Valoracion: valora
+    Comentario "1" --> "*" Respuesta: tiene
+    Colegio "1" --> "*" Imagen
+    Colegio "*" --> "*" Actividad: tiene
+    Actividad "*" --> "*" Oferta: tiene
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+
+actor Usuario
+participant AngularApp
+participant AngularService
+participant SpringBootController
+participant SpringBootService
+participant SpringBootRepository
+database MySQL
+participant Hibernate
+
+User -> AngularApp: Solicitar borrado de datos
+activate AngularApp
+AngularApp -> AngularService: Enviar solicitud de borrado
+activate AngularService
+AngularService -> SpringBootController: Enviar solicitud de borrado
+activate SpringBootController
+SpringBootController -> SpringBootService: Enviar solicitud de borrado
+activate SpringBootService
+SpringBootService -> SpringBootRepository: Verificar existencia de datos a borrar
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Consultar base de datos para verificar existencia
+activate Hibernate
+Hibernate -> MySQL: Consultar base de datos para verificar existencia
+deactivate Hibernate
+SpringBootRepository --> SpringBootService: Datos a borrar encontrados
+deactivate SpringBootRepository
+SpringBootService -> SpringBootRepository: Eliminar datos de la base de datos
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Eliminar datos de la base de datos
+activate Hibernate
+Hibernate -> MySQL: Eliminar datos de la base de datos
+deactivate Hibernate
+deactivate SpringBootRepository
+SpringBootService --> SpringBootController: Confirmación de borrado
+deactivate SpringBootService
+SpringBootController --> AngularService: Confirmación de borrado
+deactivate SpringBootController
+AngularService --> AngularApp: Confirmación de borrado
+deactivate AngularService
+deactivate AngularApp
+
+@enduml

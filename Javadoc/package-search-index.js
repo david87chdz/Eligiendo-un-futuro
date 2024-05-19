@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.example.escuelasrest"},{"l":"com.example.escuelasrest.config"},{"l":"com.example.escuelasrest.controller"},{"l":"com.example.escuelasrest.entities"},{"l":"com.example.escuelasrest.repositories"},{"l":"com.example.escuelasrest.services"}];updateSearchResults();

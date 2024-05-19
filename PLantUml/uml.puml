@@ -1,0 +1,276 @@
+@startuml
+
+package com.example.escuelasrest.entities {
+
+    class Actividad {
+        - id: Long
+        - nombre: String
+        - tipo: String
+        - ofertas: List<Oferta>
+
+        + Actividad()
+        + Actividad(nombre: String, tipo: String, activo: Boolean)
+        + getId(): Long
+        + getNombre(): String
+        + setNombre(nombre: String): void
+        + getTipo(): String
+        + setTipo(tipo: String): void
+        + setActivo(activo: Boolean): void
+        + getOfertas(): List<Oferta>
+        + setOfertas(ofertas: List<Oferta>): void
+        + agregarOferta(oferta: Oferta): void
+        + eliminarOferta(oferta: Oferta): void
+    }
+
+    class Colegio {
+        - id: Long
+        - nombre: String
+        - provincia: String
+        - localidad: String
+        - denominacion: String
+        - naturaleza: String
+        - comedor: Boolean
+        - concierto: Boolean
+        - email: String
+        - web: String
+        - descripcion: String
+        - direccion: String
+        - telefono: String
+        - localizacion: String
+        - codigo: String
+        - activo: Boolean
+        - imagenes: List<Imagen>
+        - ofertas: List<Oferta>
+        - usuario: Usuario
+        - comentarios: List<Comentario>
+        - valoraciones: List<Valoracion>
+        - respuestas: List<Respuesta>
+
+        + Colegio()
+        + Colegio(id: Long, nombre: String, provincia: String, localidad: String, denominacion: String, naturaleza: String, comedor: Boolean, concierto: Boolean, email: String, web: String, descripcion: String, direccion: String, telefono: String, imagenes: List<Imagen>, ofertas: List<Oferta>, usuario: Usuario, comentarios: List<Comentario>, valoraciones: List<Valoracion>, respuestas: List<Respuesta>, codigo: String, activo: Boolean)
+        + getId(): Long
+        + getNombre(): String
+        + setNombre(nombre: String): void
+        + getProvincia(): String
+        + setProvincia(provincia: String): void
+        + getLocalidad(): String
+        + setLocalidad(localidad: String): void
+        + getDenominacion(): String
+        + setDenominacion(denominacion: String): void
+        + getNaturaleza(): String
+        + setNaturaleza(naturaleza: String): void
+        + isComedor(): Boolean
+        + setComedor(comedor: Boolean): void
+        + isConcierto(): Boolean
+        + setConcierto(concierto: Boolean): void
+        + getEmail(): String
+        + setEmail(email: String): void
+        + getWeb(): String
+        + setWeb(web: String): void
+        + getDescripcion(): String
+        + setDescripcion(descripcion: String): void
+        + getDireccion(): String
+        + setDireccion(direccion: String): void
+        + getTelefono(): String
+        + setTelefono(telefono: String): void
+        + getLocalizacion(): String
+        + setLocalizacion(localizacion: String): void
+        + getCodigo(): String
+        + setCodigo(codigo: String): void
+        + isActivo(): Boolean
+        + setActivo(activo: Boolean): void
+        + getImagenes(): List<Imagen>
+        + setImagenes(imagenes: List<Imagen>): void
+        + getOfertas(): List<Oferta>
+        + setOfertas(ofertas: List<Oferta>): void
+        + getUsuario(): Usuario
+        + setUsuario(usuario: Usuario): void
+        + getComentarios(): List<Comentario>
+        + setComentarios(comentarios: List<Comentario>): void
+        + getValoraciones(): List<Valoracion>
+        + setValoraciones(valoraciones: List<Valoracion>): void
+        + getRespuestas(): List<Respuesta>
+        + setRespuestas(respuestas: List<Respuesta>): void
+        + addComentario(comentario: Comentario): void
+        + removeComentario(comentario: Comentario): void
+        + addValoracion(valoracion: Valoracion): void
+        + removeValoracion(valoracion: Valoracion): void
+        + addRespuesta(respuesta: Respuesta): void
+        + removeRespuesta(respuesta: Respuesta): void
+    }
+
+    class Comentario {
+        - id: Long
+        - contenido: String
+        - fecha: LocalDateTime
+        - activo: Boolean
+        - usuario: Usuario
+        - colegio: Colegio
+
+        + Comentario()
+        + Comentario(contenido: String, fecha: LocalDateTime, usuario: Usuario, colegio: Colegio, activo: Boolean)
+        + Comentario(contenido: String, usuario: Usuario, colegio: Colegio, activo: Boolean)
+        + getId(): Long
+        + getContenido(): String
+        + setContenido(contenido: String): void
+        + getFecha(): LocalDateTime
+        + setFecha(fecha: LocalDateTime): void
+        + isActivo(): Boolean
+        + setActivo(activo: Boolean): void
+        + getUsuario(): Usuario
+        + setUsuario(usuario: Usuario): void
+        + getColegio(): Colegio
+        + setColegio(colegio: Colegio): void
+    }
+
+    class Imagen {
+        - id: Long
+        - url: Blob
+        - descripcion: String
+        - colegio: Colegio
+        - activo: Boolean
+
+        + Imagen()
+        + Imagen(url: Blob, descripcion: String, colegio: Colegio)
+        + Imagen(url: String, descripcion: String, colegio: Colegio)
+        + getId(): Long
+        + getUrl(): Blob
+        + setUrl(url: Blob): void
+        + getDescripcion(): String
+        + setDescripcion(descripcion: String): void
+        + getColegio(): Colegio
+        + setColegio(colegio: Colegio): void
+        + isActivo(): Boolean
+        + setActivo(activo: Boolean): void
+        + getUrlAsString(): String
+    }
+
+    class Oferta {
+        - id: Long
+        - actividad: Actividad
+        - colegio: Colegio
+
+        + Oferta()
+        + Oferta(actividad: Actividad, colegio: Colegio, activo: Boolean)
+        + getId(): Long
+        + setActivo(activo: Boolean): void
+        + getActividad(): Actividad
+        + getColegio(): Colegio
+    }
+
+    class Respuesta {
+        - id: Long
+        - contenido: String
+        - fecha: LocalDateTime
+        - comentario: Comentario
+        - colegio: Colegio
+
+        + Respuesta()
+        + Respuesta(contenido: String, fecha: LocalDateTime, activo: Boolean, comentario: Comentario, colegio: Colegio)
+        + Respuesta(contenido: String, comentario: Comentario, activo: Boolean, colegio: Colegio)
+        + getId(): Long
+        + getContenido(): String
+        + setContenido(contenido: String): void
+        + getFecha(): LocalDateTime
+        + setFecha(fecha: LocalDateTime): void
+        + setActivo(activo: Boolean): void
+        + getComentario(): Comentario
+        + setComentario(comentario: Comentario): void
+        + getColegio(): Colegio
+        + setColegio(colegio: Colegio): void
+    }
+
+    class Usuario {
+        - id: Long
+        - nombre: String
+        - apellidos: String
+        - email: String
+        - password: String
+        - activo: boolean
+        - colegios: Collection<Colegio>
+        - rol: Rol
+        - comentarios: Collection<Comentario>
+        - valoraciones: Collection<Valoracion>
+
+        + Usuario()
+        + Usuario(nombre: String, apellidos: String, email: String, password: String, activo: Boolean)
+        + getId(): Long
+        + getNombre(): String
+        + setNombre(nombre: String): void
+        + getApellidos(): String
+        + setApellidos(apellidos: String): void
+        + getEmail(): String
+        + setEmail(email: String): void
+        + getPassword(): String
+        + setPassword(password: String): void
+        + isActivo(): boolean
+        + setActivo(activo: boolean): void
+        + getColegios(): Collection<Colegio>
+        + setColegios(colegios: Collection<Colegio>): void
+        + getRol(): Rol
+        + setRol(rol: Rol): void
+        + getComentarios(): Collection<Comentario>
+        + setComentarios(comentarios: Collection<Comentario>): void
+        + getValoraciones(): Collection<Valoracion>
+        + setValoraciones(valoraciones: Collection<Valoracion>): void
+        + addColegio(colegio: Colegio): void
+        + removeColegio(colegio: Colegio): void
+        + addComentario(comentario: Comentario): void
+        + removeComentario(comentario: Comentario): void
+        + addValoracion(valoracion: Valoracion): void
+        + removeValoracion(valoracion: Valoracion): void
+    }
+
+    class Rol {
+        - id: Long
+        - tipo: String
+        - usuarios: List<Usuario>
+
+        + Rol()
+        + Rol(tipo: String)
+        + getId(): Long
+        + getTipo(): String
+        + setTipo(tipo: String): void
+        + getUsuarios(): List<Usuario>
+        + setUsuarios(usuarios: List<Usuario>): void
+        + addUsuario(usuario: Usuario): void
+        + removeUsuario(usuario: Usuario): void
+    }
+
+    class Valoracion {
+        - id: Long
+        - puntuacion: Integer
+        - fecha: LocalDateTime
+        - usuario: Usuario
+        - colegio: Colegio
+
+        + Valoracion()
+        + Valoracion(puntuacion: Integer, usuario: Usuario, colegio: Colegio)
+        + getId(): Long
+        + getPuntuacion(): Integer
+        + setPuntuacion(puntuacion: Integer): void
+        + getFecha(): LocalDateTime
+        + setFecha(fecha: LocalDateTime): void
+        + getUsuario(): Usuario
+        + setUsuario(usuario: Usuario): void
+        + getColegio(): Colegio
+        + setColegio(colegio: Colegio): void
+        + getValoracion(): double
+    }
+
+    Usuario "1" --> "1" Rol: tiene
+    Usuario "0..1" --> "0..1" Colegio: pertenece a
+    Colegio "1" --> "*" Comentario
+    Colegio "1" --> "*" Valoracion
+    Valoracion "1" --> "1" Usuario: realizada por
+    Valoracion "1" --> "1" Colegio: valoración de
+    Comentario "1" --> "0..1" Respuesta
+    Usuario "1" --> "*" Comentario: escribe
+    Usuario "1" --> "*" Valoracion: valora
+    Comentario "1" --> "*" Respuesta: tiene
+    Colegio "1" --> "*" Imagen
+    Colegio "*" --> "*" Actividad: tiene
+    Actividad "*" --> "*" Oferta: tiene
+}
+
+@enduml

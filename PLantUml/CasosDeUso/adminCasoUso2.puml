@@ -1,0 +1,52 @@
+@startuml
+
+left to right direction
+
+actor Administrador as admin
+
+rectangle Sistema {
+    usecase "Iniciar Sesión" as login
+    usecase "Ver Colegios" as view_schools
+    usecase "Ver Detalle del Colegio" as view_school_detail
+    usecase "Valorar Colegio" as rate_school
+    usecase "Hacer Comentario" as make_comment
+    usecase "Ver Comentarios" as view_comments
+    usecase "Crear Colegio" as create_school
+    usecase "Ver Datos de Colegios y Usuarios" as view_data
+    usecase "Activar/Desactivar/Borrar Colegios" as manage_schools
+    usecase "Activar/Desactivar/Borrar Usuarios" as manage_users
+    usecase "Borrar Comentarios" as delete_comments
+    usecase "Borrar Respuestas" as delete_responses
+    usecase "Borrar Imágenes" as delete_images
+    usecase "Borrar Valoraciones" as delete_ratings
+
+    admin --> login
+    admin --> view_schools
+    admin --> view_school_detail
+    admin --> rate_school
+    admin --> make_comment
+    admin --> view_comments
+    admin --> create_school
+    admin --> view_data
+    admin --> manage_schools
+    admin --> manage_users
+    admin --> delete_comments
+    admin --> delete_responses
+    admin --> delete_images
+    admin --> delete_ratings
+
+    login --> (view_schools)
+    view_schools --> (view_school_detail)
+    view_school_detail --> (rate_school)
+    view_school_detail --> (make_comment)
+    view_school_detail --> (view_comments)
+    create_school --> (view_data)
+    view_data --> (manage_schools)
+    view_data --> (manage_users)
+    view_comments --> (delete_comments)
+    view_comments --> (delete_responses)
+    view_school_detail --> (delete_images)
+    view_school_detail --> (delete_ratings)
+}
+
+@enduml

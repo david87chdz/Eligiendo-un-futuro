@@ -1,0 +1,15 @@
+@startuml
+
+[*] --> ProgramaIniciado
+
+ProgramaIniciado --> Angular : UsuarioIniciaSesion
+Angular --> Express : EnviaCredenciales
+Express --> MySQL : ConsultaBaseDeDatos
+MySQL --> Express : DatosDeAutenticacion
+Express --> JWT : GeneraTokenJWT
+JWT --> Express : TokenJWTGenerado
+Express --> Angular : DevuelveTokenJWT
+Angular --> Angular : AlmacenaTokenJWT
+Angular --> Angular : NavegaAVistaCorrespondiente
+
+@enduml

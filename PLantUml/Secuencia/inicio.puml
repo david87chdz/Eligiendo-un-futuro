@@ -1,0 +1,19 @@
+@startuml
+
+[*] --> ProgramaIniciado
+
+ProgramaIniciado --> ControladoresFront : IniciaSolicitud
+ControladoresFront --> ControladoresRest : SolicitaDatos
+ControladoresRest --> Servicios : SolicitaDatos
+Servicios --> Repositorios : SolicitaDatos
+Repositorios --> Hibernate : SolicitaDatos
+Hibernate --> BaseDeDatos : ConsultaDatos
+BaseDeDatos --> Hibernate : DatosObtenidos
+Hibernate --> Repositorios : DatosObtenidos
+Repositorios --> Servicios : DatosObtenidos
+Servicios --> ControladoresRest : DatosObtenidos
+ControladoresRest --> ControladoresFront : DatosObtenidos
+ControladoresFront --> Vista : MuestraDatos
+
+@enduml
+

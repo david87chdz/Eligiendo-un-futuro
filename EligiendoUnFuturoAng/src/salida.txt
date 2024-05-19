@@ -1,0 +1,362 @@
+ El volumen de la unidad D es Nuevo vol
+ El n£mero de serie del volumen es: 36A1-B6F0
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src
+
+13/05/2024  21:17    <DIR>          .
+12/05/2024  10:59    <DIR>          ..
+12/05/2024  01:31    <DIR>          app
+13/05/2024  21:16                27 ArbolSrcAngular.txt
+14/04/2024  15:11    <DIR>          assets
+02/05/2024  21:08            97.909 favicon.ico
+02/05/2024  21:08            69.312 favicon.ico3
+07/04/2024  09:44               604 index.html
+23/04/2024  17:46               270 main.ts
+13/05/2024  21:17                 0 salida.txt
+10/05/2024  16:25             1.528 styles.scss
+               7 archivos        169.650 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app
+
+12/05/2024  01:31    <DIR>          .
+13/05/2024  21:17    <DIR>          ..
+03/05/2024  18:46             1.254 app-routing.module.ts
+09/05/2024  22:35               166 app.component.html
+10/05/2024  15:54               382 app.component.scss
+07/04/2024  09:44             1.062 app.component.spec.ts
+07/05/2024  21:42             1.348 app.component.ts
+12/05/2024  01:31             4.310 app.module.ts
+12/05/2024  01:31    <DIR>          components
+08/05/2024  21:09    <DIR>          guards
+12/05/2024  01:31    <DIR>          interceptors
+03/05/2024  09:54    <DIR>          interfaces
+01/05/2024  08:42    <DIR>          pipes
+08/05/2024  21:09    <DIR>          services
+03/05/2024  13:37    <DIR>          shared
+               6 archivos          8.522 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components
+
+12/05/2024  01:31    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+10/05/2024  15:54    <DIR>          home
+10/05/2024  15:54    <DIR>          login
+23/04/2024  17:46    <DIR>          maps
+07/05/2024  21:28    <DIR>          private-area
+12/05/2024  01:31    <DIR>          rating-modal
+03/05/2024  13:37    <DIR>          reset-password
+12/05/2024  01:31    <DIR>          schools
+10/05/2024  15:54    <DIR>          sign-up
+               0 archivos              0 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\home
+
+10/05/2024  15:54    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+11/05/2024  09:39             8.073 home.component.html
+11/05/2024  09:39             1.369 home.component.scss
+07/04/2024  09:44               566 home.component.spec.ts
+04/05/2024  21:40               690 home.component.ts
+               4 archivos         10.698 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\login
+
+10/05/2024  15:54    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+11/05/2024  09:54               795 login.component.html
+10/05/2024  16:41             2.744 login.component.scss
+07/04/2024  09:44               573 login.component.spec.ts
+11/05/2024  11:04             6.965 login.component.ts
+               4 archivos         11.077 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\maps
+
+23/04/2024  17:46    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+01/05/2024  08:42    <DIR>          map
+               0 archivos              0 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\maps\map
+
+01/05/2024  08:42    <DIR>          .
+23/04/2024  17:46    <DIR>          ..
+01/05/2024  08:42                45 map.component.html
+23/04/2024  17:46                 0 map.component.scss
+23/04/2024  17:46               559 map.component.spec.ts
+01/05/2024  08:42             1.952 map.component.ts
+23/04/2024  17:46               310 map.module.ts
+               5 archivos          2.866 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\private-area
+
+07/05/2024  21:28    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+08/05/2024  21:09    <DIR>          admin-area
+12/05/2024  01:31    <DIR>          college-area
+27/04/2024  14:38               905 private-area-routing.module.ts
+07/05/2024  21:28             1.829 private-area.module.ts
+12/05/2024  01:31    <DIR>          user-area
+               2 archivos          2.734 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\private-area\admin-area
+
+08/05/2024  21:09    <DIR>          .
+07/05/2024  21:28    <DIR>          ..
+08/05/2024  21:09            10.751 admin-area.component.html
+09/05/2024  22:48               248 admin-area.component.scss
+07/04/2024  09:44               602 admin-area.component.spec.ts
+08/05/2024  21:09            16.068 admin-area.component.ts
+               4 archivos         27.669 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\private-area\college-area
+
+12/05/2024  01:31    <DIR>          .
+07/05/2024  21:28    <DIR>          ..
+11/05/2024  18:04            10.058 college-area.component.html
+12/05/2024  01:31             4.337 college-area.component.scss
+07/04/2024  09:44               616 college-area.component.spec.ts
+11/05/2024  17:09            20.042 college-area.component.ts
+               4 archivos         35.053 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\private-area\user-area
+
+12/05/2024  01:31    <DIR>          .
+07/05/2024  21:28    <DIR>          ..
+11/05/2024  11:27             6.177 user-area.component.html
+11/05/2024  11:26             3.239 user-area.component.scss
+07/04/2024  09:44               595 user-area.component.spec.ts
+12/05/2024  01:31             8.593 user-area.component.ts
+               4 archivos         18.604 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\rating-modal
+
+12/05/2024  01:31    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+12/05/2024  01:31               289 rating-modal.component.html
+12/05/2024  01:31             1.348 rating-modal.component.scss
+12/05/2024  01:31               616 rating-modal.component.spec.ts
+12/05/2024  01:31               658 rating-modal.component.ts
+               4 archivos          2.911 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\reset-password
+
+03/05/2024  13:37    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+11/05/2024  10:23               790 reset-password.component.html
+11/05/2024  10:25             1.273 reset-password.component.scss
+01/05/2024  08:42               630 reset-password.component.spec.ts
+11/05/2024  10:34             2.302 reset-password.component.ts
+               4 archivos          4.995 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\schools
+
+12/05/2024  01:31    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+12/05/2024  11:12    <DIR>          school-detail
+12/05/2024  11:12    <DIR>          school-list
+12/05/2024  01:31               620 schools-routing.module.ts
+03/05/2024  23:29             1.501 schools.module.ts
+               2 archivos          2.121 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\schools\school-detail
+
+12/05/2024  11:12    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+12/05/2024  11:12             4.091 school-detail.component.html
+11/05/2024  16:29             2.112 school-detail.component.scss
+07/04/2024  09:44               623 school-detail.component.spec.ts
+12/05/2024  01:31            11.342 school-detail.component.ts
+               4 archivos         18.168 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\schools\school-list
+
+12/05/2024  11:12    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+12/05/2024  11:12             5.244 school-list.component.html
+09/05/2024  22:42             5.349 school-list.component.scss
+07/04/2024  09:44               609 school-list.component.spec.ts
+08/05/2024  21:09             4.160 school-list.component.ts
+               4 archivos         15.362 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\components\sign-up
+
+10/05/2024  15:54    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+11/05/2024  12:22             2.009 sign-up.component.html
+11/05/2024  12:20             2.976 sign-up.component.scss
+07/04/2024  09:44               581 sign-up.component.spec.ts
+10/05/2024  15:54             4.632 sign-up.component.ts
+               4 archivos         10.198 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\guards
+
+08/05/2024  21:09    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+07/04/2024  09:44               482 admin.guard.spec.ts
+08/05/2024  21:09               659 admin.guard.ts
+07/04/2024  09:44               478 auth.guard.spec.ts
+08/05/2024  21:09               960 auth.guard.ts
+07/04/2024  09:44               486 school.guard.spec.ts
+08/05/2024  21:09               893 school.guard.ts
+07/04/2024  09:44               478 user.guard.spec.ts
+08/05/2024  21:09               885 user.guard.ts
+               8 archivos          5.321 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\interceptors
+
+12/05/2024  01:31    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+12/05/2024  01:31               600 jwt.interceptor.ts
+               1 archivos            600 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\interfaces
+
+03/05/2024  09:54    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+23/04/2024  17:46               100 Activities.ts
+05/05/2024  17:32             1.136 Answers.ts
+27/04/2024  14:38               701 Comment.ts
+07/04/2024  09:44               707 Evaluations.ts
+11/05/2024  17:08               555 Images.ts
+03/05/2024  09:54               479 School.ts
+03/05/2024  09:00               200 user.ts
+               7 archivos          3.878 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\pipes
+
+01/05/2024  08:42    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+23/04/2024  17:46               215 description.pipe.spec.ts
+04/05/2024  21:50               315 description.pipe.ts
+01/05/2024  08:42               200 safe-url.pipe.spec.ts
+01/05/2024  08:42               390 safe-url.pipe.ts
+               4 archivos          1.120 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\services
+
+08/05/2024  21:09    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+14/04/2024  15:11               393 activities.service.spec.ts
+04/05/2024  21:51             1.787 activities.service.ts
+07/04/2024  09:44               378 answers.service.spec.ts
+01/05/2024  08:42             2.243 answers.service.ts
+14/04/2024  15:11               378 apijcyl.service.spec.ts
+23/04/2024  17:46               672 apijcyl.service.ts
+07/04/2024  09:44               363 auth.service.spec.ts
+08/05/2024  23:31             3.086 auth.service.ts
+07/04/2024  09:44               383 comments.service.spec.ts
+01/05/2024  08:42             2.633 comments.service.ts
+23/04/2024  17:46               393 cordinates.service.spec.ts
+23/04/2024  17:46               607 cordinates.service.ts
+07/04/2024  09:44               373 images.service.spec.ts
+04/05/2024  11:00             2.191 images.service.ts
+07/04/2024  09:44               378 ratings.service.spec.ts
+05/05/2024  23:23             1.328 ratings.service.ts
+07/04/2024  09:44               378 schools.service.spec.ts
+03/05/2024  14:13             3.772 schools.service.ts
+07/04/2024  09:44               368 users.service.spec.ts
+03/05/2024  12:12             3.928 users.service.ts
+              20 archivos         26.032 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\shared
+
+03/05/2024  13:37    <DIR>          .
+12/05/2024  01:31    <DIR>          ..
+10/05/2024  15:54    <DIR>          footer
+12/05/2024  11:12    <DIR>          navbar
+03/05/2024  16:28             1.198 shared.module.ts
+               1 archivos          1.198 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\shared\footer
+
+10/05/2024  15:54    <DIR>          .
+03/05/2024  13:37    <DIR>          ..
+12/05/2024  11:13             1.048 footer.component.html
+12/05/2024  10:55             1.430 footer.component.scss
+03/05/2024  12:37               559 footer.component.spec.ts
+03/05/2024  12:37               203 footer.component.ts
+               4 archivos          3.240 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\app\shared\navbar
+
+12/05/2024  11:12    <DIR>          .
+03/05/2024  13:37    <DIR>          ..
+12/05/2024  22:45             1.103 navbar.component.html
+12/05/2024  22:52               765 navbar.component.scss
+03/05/2024  12:36               559 navbar.component.spec.ts
+08/05/2024  21:09             1.405 navbar.component.ts
+               4 archivos          3.832 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\assets
+
+14/04/2024  15:11    <DIR>          .
+13/05/2024  21:17    <DIR>          ..
+07/04/2024  09:44                 0 .gitkeep
+07/04/2024  09:44    <DIR>          i18n
+06/05/2024  22:39    <DIR>          img
+14/04/2024  15:11    <DIR>          json
+               1 archivos              0 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\assets\i18n
+
+07/04/2024  09:44    <DIR>          .
+14/04/2024  15:11    <DIR>          ..
+07/04/2024  09:44                 0 en.json
+07/04/2024  09:44                 0 es.json
+               2 archivos              0 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\assets\img
+
+06/05/2024  22:39    <DIR>          .
+14/04/2024  15:11    <DIR>          ..
+03/05/2024  18:16           180.796 arcoiris2.jpg
+03/05/2024  18:15            14.211 arcooiris.jpg
+03/05/2024  16:42         1.088.362 Bambu.jpg
+01/05/2024  21:15           245.050 EligieendoPrincipal.jpeg
+01/05/2024  23:04           159.358 Eligiendo.jpeg
+01/05/2024  22:54           226.264 EligiendoByN.jpeg
+27/04/2024  14:38            58.593 eligiendoUnfuturo.jpeg
+01/05/2024  08:42           190.928 fondo.png
+03/05/2024  16:49            25.835 fondo2.jpg
+03/05/2024  16:51           892.990 fondo3.jpg
+03/05/2024  17:42         2.799.039 fondo4.jpg
+03/05/2024  17:48         6.291.015 fondo5.jpg
+03/05/2024  17:52           271.903 fondo6.jpg
+03/05/2024  17:55           849.668 fondo7.jpg
+03/05/2024  17:58           885.242 fondo8jpg.jpg
+03/05/2024  18:06           636.715 fondo9.jpg
+06/05/2024  22:39            34.944 gradiacionjpg.jpg
+01/05/2024  08:42           164.072 school-teacher-148135.svg
+07/04/2024  09:44    <DIR>          schools
+07/04/2024  09:44    <DIR>          web
+              18 archivos     15.014.985 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\assets\img\schools
+
+07/04/2024  09:44    <DIR>          .
+06/05/2024  22:39    <DIR>          ..
+07/04/2024  09:44            41.871 colegio.jpg
+               1 archivos         41.871 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\assets\img\web
+
+07/04/2024  09:44    <DIR>          .
+06/05/2024  22:39    <DIR>          ..
+07/04/2024  09:44            58.166 fondo1.jpg
+07/04/2024  09:44         1.835.366 fondo2.png
+07/04/2024  09:44         3.540.740 fondo3.jpg
+07/04/2024  09:44         2.565.624 fondo4.jpg
+07/04/2024  09:44            34.497 fondoEscuela.avif
+               5 archivos      8.034.393 bytes
+
+ Directorio de D:\Develop\EligiendoUnFuturoTfc\EligiendoUnFuturoAng\src\assets\json
+
+14/04/2024  15:11    <DIR>          .
+14/04/2024  15:11    <DIR>          ..
+14/04/2024  15:11         2.381.734 directorio-de-centros-docentes.geojson
+14/04/2024  15:11         1.994.754 directorio-de-centros-docentes.json
+               2 archivos      4.376.488 bytes
+
+     Total de archivos en la lista:
+             140 archivos     27.853.586 bytes
+              92 dirs  381.911.867.392 bytes libres

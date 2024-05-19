@@ -1,0 +1,58 @@
+@startuml
+
+actor Usuario
+participant AngularApp
+participant AngularService
+participant SpringBootController
+participant SpringBootService
+participant SpringBootRepository
+participant Hibernate
+database MySQL
+
+User -> AngularApp: Subir archivo / Hacer comentario
+activate AngularApp
+AngularApp -> AngularService: Enviar datos para guardar
+activate AngularService
+AngularService -> SpringBootController: Enviar datos para guardar
+activate SpringBootController
+SpringBootController -> SpringBootService: Enviar datos para guardar
+activate SpringBootService
+SpringBootService -> SpringBootRepository: Guardar datos en la base de datos
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Guardar datos en la base de datos
+activate Hibernate
+Hibernate -> MySQL: Guardar datos en la base de datos
+deactivate Hibernate
+deactivate SpringBootRepository
+SpringBootService --> SpringBootController: Confirmación de guardado
+deactivate SpringBootService
+SpringBootController --> AngularService: Confirmación de guardado
+deactivate SpringBootController
+AngularService --> AngularApp: Confirmación de guardado
+deactivate AngularService
+deactivate AngularApp
+
+User -> AngularApp: Solicitar datos actualizados
+activate AngularApp
+AngularApp -> AngularService: Solicitar datos actualizados
+activate AngularService
+AngularService -> SpringBootController: Solicitar datos actualizados
+activate SpringBootController
+SpringBootController -> SpringBootService: Solicitar datos actualizados
+activate SpringBootService
+SpringBootService -> SpringBootRepository: Consultar datos actualizados
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Consultar datos actualizados
+activate Hibernate
+Hibernate -> MySQL: Consultar datos actualizados
+deactivate Hibernate
+deactivate SpringBootRepository
+SpringBootService --> SpringBootController: Datos actualizados
+deactivate SpringBootService
+SpringBootController --> AngularService: Datos actualizados
+deactivate SpringBootController
+AngularService --> AngularApp: Datos actualizados
+deactivate AngularService
+deactivate AngularApp
+
+@enduml

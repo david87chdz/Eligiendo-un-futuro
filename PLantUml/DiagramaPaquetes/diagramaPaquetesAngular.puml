@@ -1,0 +1,48 @@
+@startuml
+
+package "src" {
+    package "app" {
+        file [app-routing.module.ts]
+        file [app.component.html]
+        file [app.component.scss]
+        file [app.component.ts]
+        file [app.module.ts]        
+        package "shared" {
+            file [shared.module.ts]
+            package "footer"
+            package "navbar"
+        }     
+        package "components" {
+            package "home" 
+            package "login" 
+            package "rating-modal"
+            package "private-area" {
+                package "admin-area"
+                package "college-area" 
+                package "user-area"
+                file [private-area.module.ts]
+                file [private-area-routing.module.ts]
+            }
+            package "reset-password"
+            package "schools" {
+                package "school-detail"
+                package "school-list" 
+                file [schools.module.ts]
+                file [schools-routing.module.ts]
+            }
+            package "sign-up" 
+        }
+        package "guards"
+        package "interceptors"
+        package "interfaces"
+        package "pipes"
+        package "services"
+    }
+    package "assets" {
+        package "i18n"
+        package "img"    
+        package "json"
+    }
+}
+
+@enduml

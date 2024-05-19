@@ -1,0 +1,61 @@
+@startuml
+
+package "Cliente (Angular)" {
+    [Componentes Angular]
+    [Servicios Angular]
+    [Routing Angular]
+    [Vista Angular]
+}
+
+package "Servidor (Express)" {
+    [Controladores Express]
+    [Servicios JWT]
+   
+}
+
+package "Servidor (Spring Boot)" {
+    [Controladores REST]
+    [Entidades]
+    [Servicios]
+    [Repositorios]
+    [Capa de Persistencia (Hibernate)]
+    
+}
+
+package "Servidor (MySQL)"{
+  [Interacciones con la Base de Datos MySQL]
+}
+
+
+package "Servidor de correo (Resend)"{
+  [Interacciones con Servidor de correo]
+}
+
+[Componentes Angular] --> [Servicios Angular]
+[Routing Angular] --> [Componentes Angular]
+[Vista Angular] --> [Componentes Angular]
+[Componentes Angular] --> [Vista Angular]
+[Controladores Express] --> [Servicios JWT]
+[Servicios JWT] --> [Interacciones con la Base de Datos MySQL]
+[Servicios Angular] --> [Controladores REST]
+[Servicios Angular] --> [Controladores Express]
+[Servicios Angular] --> [Interacciones con JSON]
+[Interacciones con la Base de Datos MySQL] --> [Capa de Persistencia (Hibernate)]
+[Interacciones con la Base de Datos MySQL] --> [Servicios JWT]
+[Servicios JWT] --> [Controladores Express]
+
+[Controladores REST] --> [Servicios]
+[Entidades] --> [Repositorios]
+[Servicios] --> [Repositorios]
+[Interacciones con JSON] --> [Controladores REST]
+[Repositorios] --> [Capa de Persistencia (Hibernate)]
+[Controladores Express] --> [Servicios Angular]
+[Controladores REST] --> [Servicios Angular]
+[Capa de Persistencia (Hibernate)] --> [Repositorios]
+[Repositorios] --> [Servicios]
+[Capa de Persistencia (Hibernate)] --> [Interacciones con la Base de Datos MySQL]
+[Controladores Express] --> [Interacciones con Servidor de correo] 
+[Interacciones con Servidor de correo] --> [Controladores Express]
+[Servicios Angular] --> [Componentes Angular]
+
+@enduml

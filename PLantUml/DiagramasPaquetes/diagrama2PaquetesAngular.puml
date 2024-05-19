@@ -1,0 +1,97 @@
+@startuml
+
+package "src" {
+    package "app" {
+        file [app-routing.module.ts]
+        file [app.component.html]
+        file [app.component.scss]
+        file [app.component.ts]
+        file [app.module.ts]
+        
+        package "shared" {
+            file [shared.module.ts]
+            package "footer" {
+                file [footer.component.html]
+                file [footer.component.scss]
+                file [footer.component.ts]
+            }
+            package "navbar" {
+                file [navbar.component.html]
+                file [navbar.component.scss]
+                file [navbar.component.ts]
+            }
+        }
+        
+        package "components" {
+            package "home" {
+                file [home.component.html]
+                file [home.component.scss]
+                file [home.component.ts]
+            }
+            package "login" {
+                file [login.component.html]
+                file [login.component.scss]
+                file [login.component.ts]
+            }
+            package "rating-modal" {
+                file [rating-modal.component.html]
+                file [rating-modal.component.scss]
+                file [rating-modal.component.ts]
+            }
+            package "private-area" {
+                package "admin-area" {
+                    file [admin-area.component.html]
+                    file [admin-area.component.scss]
+                    file [admin-area.component.ts]
+                }
+                package "college-area" {
+                    file [college-area.component.html]
+                    file [college-area.component.scss]
+                    file [college-area.component.ts]
+                }
+                package "user-area" {
+                    file [user-area.component.html]
+                    file [user-area.component.scss]
+                    file [user-area.component.ts]
+                }
+                file [private-area.module.ts]
+                file [private-area-routing.module.ts]
+            }
+            [reset-password]
+            package "schools" {
+                package "school-detail" {
+                    file [school-detail.component.html]
+                    file [school-detail.component.scss]
+                    file [school-detail.component.ts]
+                }
+                package "school-list" {
+                    file [school-list.component.html]
+                    file [school-list.component.scss]
+                    file [school-list.component.ts]
+                }
+                file [schools.module.ts]
+                file [schools-routing.module.ts]
+            }
+            package "sign-up" {
+                file [sign-up.component.html]
+                file [sign-up.component.scss]
+                file [sign-up.component.ts]
+            }
+        }
+        [guards]
+        [interceptors]
+        [interfaces]
+        [pipes]
+        [services]
+    }
+
+    package "assets" {
+        [i18n]
+        package "img" {
+           
+        }
+        [json]
+    }
+}
+
+@enduml

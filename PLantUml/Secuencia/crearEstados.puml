@@ -1,0 +1,18 @@
+@startuml
+
+[*] --> ProgramaIniciado
+
+ProgramaIniciado --> ControladoresFront : IniciaCreacion
+ControladoresFront --> ControladoresRest : SolicitaCreacion
+ControladoresRest --> Servicios : SolicitaCreacion
+Servicios --> Repositorios : SolicitaCreacion
+Repositorios --> Hibernate : SolicitaCreacion
+Hibernate --> BaseDeDatos : InsertaDatos
+BaseDeDatos --> Hibernate : ConfirmacionInsercion
+Hibernate --> Repositorios : ConfirmacionInsercion
+Repositorios --> Servicios : ConfirmacionInsercion
+Servicios --> ControladoresRest : ConfirmacionInsercion
+ControladoresRest --> ControladoresFront : ConfirmacionInsercion
+ControladoresFront --> Usuario : MuestraConfirmacion
+
+@enduml

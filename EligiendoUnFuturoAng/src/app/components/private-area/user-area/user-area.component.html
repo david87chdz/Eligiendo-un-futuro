@@ -1,0 +1,144 @@
+<div class="header-princ">
+  <app-navbar></app-navbar>
+</div>
+
+
+<div class="container">
+
+  <div class="private-area" *ngIf="user">
+    <div class="card">
+      <h2>Bienvenido {{ user.nombre }}</h2>
+      <div class="button-container">
+        <div class="button-card">
+          <button pButton pRipple label="Modificar mis datos" icon="pi pi-user-edit" class="primeng p-button-success-princ"
+            (click)="toggleEditForm()"></button>
+        </div>
+        <div class="button-card">
+          <button pButton pRipple label="Mostrar comentarios" icon="pi pi-comments" class="primeng p-button-success-princ"
+            (click)="toggleComments()"></button>
+        </div>
+        <div class="button-card">
+          <button pButton pRipple label="Mostrar Valoraciones" icon="pi pi-star-fill" class="primeng p-button-success-princ"
+            (click)="showEvaluations()"></button>
+        </div>
+        <div class="button-card">
+          <button pButton pRipple label="Eliminar Cuenta" icon="pi pi-trash" class="primeng p-button-success-princ"
+            (click)="deleteUser()"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-form" *ngIf="showEditUser">
+    <div class="card">
+      <h2>Modificar mis datos</h2>
+      <form>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" [(ngModel)]="user.nombre" name="nombre" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="nombre">Apellidos:</label>
+          <input type="text" id="apellidos" [(ngModel)]="user.apellidos" name="apellidos" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="user.email" name="email" class="form-control" disabled>
+        </div>
+        <div class="form-group">
+          <label for="newPassword">Nueva contraseña:</label>
+          <p-password type="password" id="newPassword" [(ngModel)]="newPassword" name="newPassword" class="form-control"
+            [toggleMask]="true" />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirmar nueva contraseña:</label>
+          <p-password type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword"
+            class="form-control" [toggleMask]="true" />
+        </div>
+        <div class="form-group">
+          <button pButton pRipple label="Guardar cambios" class="primeng p-button-success"
+            (click)="saveChanges()"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div *ngIf="showcomments">
+    <div class="comments-section" *ngIf="comments.length > 0; else noComments">
+      <h3>Mis comentarios</h3>
+      <div class="comment-cards">
+        <div *ngFor="let comment of comments" class="comment-card">
+          <div class="card">
+            <div class="comment-content">
+              <h4>Comentario:</h4>
+              <p *ngIf="!editComment">{{ comment.contenido }}</p>
+              <p><strong>Fecha:</strong> {{ comment.fecha | date }}</p>
+              
+              <p><strong>Destinatario: </strong>{{comment.colegio.nombre}}, <a [routerLink]="['/schools/', comment.colegio.id]"
+                  routerLinkActive="router-link-active">Ver</a></p>
+            </div>
+            <div class="comment-actions">
+              <div class="comment-buttons">
+                <button pButton pRipple label="Editar" icon="pi pi-pencil" class="primeng p-button-secondary"
+                  (click)="saveComment(comment)"></button>
+                <button pButton pRipple label="Eliminar" icon="pi pi-trash" class="primeng p-button-danger"
+                  (click)="deleteComment(comment.id)"></button>
+              </div>
+            </div>
+          </div>
+          <div class="comment-answers" *ngIf="commentAnswers[comment.id] && commentAnswers[comment.id].length > 0">
+            <div class="answer-cards">
+              <div *ngFor="let answer of commentAnswers[comment.id]" class="card answer-card">
+                <div class="answer-content">
+                  <h4>Respuesta:</h4>
+                  <p>{{ answer.contenido }}</p>
+                  <p><strong> Colegio:</strong></p>
+                  <p>{{ answer.colegio.nombre }}</p>
+                  <a [routerLink]="['/schools/', answer.colegio.id]" routerLinkActive="router-link-active">Ir al
+                    colegio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <ng-template #noComments>
+      <div class="card">
+        <p>No hiciste ningún comentario aún</p>
+      </div>
+    </ng-template>
+  </div>
+
+  <div *ngIf="showevaluations">
+    <div class="comments-section" *ngIf="evaluations.length > 0">
+      <h3>Mis valoraciones</h3>
+      <div class="evaluation-cards">
+        <div *ngFor="let evaluation of evaluations" class="evaluation-card">
+          <div class="card">
+            <div class="evaluation-content">
+              <h4>Puntuacion:</h4>
+              <p>{{ evaluation.puntuacion }} ⭐</p>
+              <h4>Colegio:</h4>
+              <p>{{ evaluation.colegio.nombre }}</p>
+              <a [routerLink]="['/schools/', evaluation.colegio.id]" routerLinkActive="router-link-active">Ir al
+                colegio</a>
+            </div>
+            <div class="evaluation-actions">
+              <div class="evaluation-buttons">
+                <button pButton pRipple label="Eliminar" icon="pi pi-trash" class="primeng p-button-danger"
+                  (click)="deleteEvaluation(evaluation.id)"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="evaluation-cards" *ngIf="evaluations.length === 0">
+      <div class="card">
+        <p>No hiciste ningún valoración aún</p>
+      </div>
+    </div>
+  </div>
+</div>

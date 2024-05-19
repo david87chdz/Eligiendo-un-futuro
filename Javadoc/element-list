@@ -1,0 +1,6 @@
+com.example.escuelasrest
+com.example.escuelasrest.config
+com.example.escuelasrest.controller
+com.example.escuelasrest.entities
+com.example.escuelasrest.repositories
+com.example.escuelasrest.services

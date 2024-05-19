@@ -1,0 +1,35 @@
+@startuml
+
+actor Usuario
+participant AngularApp
+participant AngularService
+participant SpringBootController
+participant SpringBootService
+participant SpringBootRepository
+database MySQL
+participant Hibernate
+
+User -> AngularApp: Modificar datos
+activate AngularApp
+AngularApp -> AngularService: Enviar solicitud de modificación
+activate AngularService
+AngularService -> SpringBootController: Enviar solicitud de modificación
+activate SpringBootController
+SpringBootController -> SpringBootService: Enviar solicitud de modificación
+activate SpringBootService
+SpringBootService -> SpringBootRepository: Actualizar datos en la base de datos
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Actualizar datos en la base de datos
+activate Hibernate
+Hibernate -> MySQL: Actualizar datos en la base de datos
+deactivate Hibernate
+deactivate SpringBootRepository
+SpringBootService --> SpringBootController: Confirmación de actualización
+deactivate SpringBootService
+SpringBootController --> AngularService: Confirmación de actualización
+deactivate SpringBootController
+AngularService --> AngularApp: Confirmación de actualización
+deactivate AngularService
+deactivate AngularApp
+
+@enduml

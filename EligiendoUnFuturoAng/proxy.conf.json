@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "https://analisis.datosabiertos.jcyl.es",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }

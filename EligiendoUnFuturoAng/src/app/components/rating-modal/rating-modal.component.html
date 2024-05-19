@@ -1,0 +1,8 @@
+<div class="rating-dialog">
+  <h2>¡Valora este colegio!</h2>
+  <div class="stars-container">
+    <div *ngFor="let star of stars; let i = index" class="star" (click)="rate(i + 1)">
+      <i class="pi pi-star" [ngClass]="{'selected': i <= selectedStar}"></i>
+    </div>
+  </div>
+</div>

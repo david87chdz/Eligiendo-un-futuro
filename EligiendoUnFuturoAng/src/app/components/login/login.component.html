@@ -1,0 +1,27 @@
+<div class="header-princ">
+  <app-navbar></app-navbar>
+</div>
+
+<div class="content-wrapper">
+  <form class="form" [formGroup]="loginForm">
+    <p class="title">Iniciar sesion</p>
+    <p class="message">Inicia sesion para acceder a nuestra web.</p>
+    <div class="flex">
+
+      <label>
+        <input required placeholder type="email" class="input" formControlName="email">
+        <span>Email</span>
+      </label>
+
+      <label>
+        <input required placeholder type="password" class="input" formControlName="password">
+        <span>Contraseña</span>
+      </label>
+    </div>
+
+    <button class="submit" (click)="login()">Entrar</button>
+    <button class="button2" routerLink="/signup">Registrarse</button>
+    <p class="signin">¿Olvidaste tu contraseña? <a (click)="passwordReminder()">Recuperar</a></p>
+  </form>
+
+</div>

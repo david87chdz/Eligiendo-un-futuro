@@ -1,0 +1,23 @@
+<div class="p-shadow-2 fixed-top header">
+    <p-toolbar>
+      <div class="p-toolbar-group-left">
+        <img src="../../../assets/img/web/EligiendoPrincipal.jpeg" routerLink="/home" alt="Tu imagen" class="logo">
+      </div>
+      <div class="p-toolbar-group-right">
+        <ng-container *ngIf="userExists; else noExists">
+        <button pButton type="button" label="Salir" icon="pi pi-sign-out" (click)="exit()"></button>
+        <button pButton type="button" label="Colegios" icon="pi pi-graduation-cap" routerLink="/schools"></button>
+        <button pButton type="button" label="Principal" icon="pi pi-home" routerLink="/home"></button>
+        <button pButton type="button" label="Area personal" icon="pi pi-user-plus" (click)="go()"></button>
+        </ng-container>
+        <ng-template #noExists>  
+        <button pButton type="button" label="Acceso" icon="pi pi-sign-in" routerLink="/login"></button>
+        <button pButton type="button" label="Registro" icon="pi pi-user-plus" routerLink="/signup"></button>
+        </ng-template>
+        
+      </div>
+    </p-toolbar>
+  </div>
+
+  
+  

@@ -1,0 +1,28 @@
+@startuml
+
+[*] --> NoRegistrado
+
+state NoRegistrado {
+    [*] --> FormularioRegistro
+    FormularioRegistro --> ValidacionCorreo : Enviar datos
+    ValidacionCorreo --> CorreoVálido : Correo válido
+    ValidacionCorreo --> CorreoInválido : Correo inválido
+}
+
+state CorreoVálido {
+    --> DatosUsuario : Confirmar datos
+}
+
+state DatosUsuario {
+    --> ConfirmacionRegistro : Confirmar registro
+}
+
+state ConfirmacionRegistro {
+    --> Registrado : Registro confirmado
+}
+
+state Registrado {
+    --> [*] : Nuevo registro
+}
+
+@enduml

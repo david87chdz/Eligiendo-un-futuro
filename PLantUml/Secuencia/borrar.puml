@@ -1,0 +1,18 @@
+@startuml
+
+[*] --> ProgramaIniciado
+
+ProgramaIniciado --> ControladoresFront : IniciaBorrado
+ControladoresFront --> ControladoresRest : SolicitaBorrado
+ControladoresRest --> Servicios : SolicitaBorrado
+Servicios --> Repositorios : SolicitaBorrado
+Repositorios --> Hibernate : SolicitaBorrado
+Hibernate --> BaseDeDatos : EliminaDatos
+BaseDeDatos --> Hibernate : ConfirmacionEliminacion
+Hibernate --> Repositorios : ConfirmacionEliminacion
+Repositorios --> Servicios : ConfirmacionEliminacion
+Servicios --> ControladoresRest : ConfirmacionEliminacion
+ControladoresRest --> ControladoresFront : ConfirmacionEliminacion
+ControladoresFront --> Usuario : MuestraConfirmacion
+
+@enduml

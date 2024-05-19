@@ -1,0 +1,25 @@
+export interface Images {
+    id: number;
+    urlAsString: string;
+    descripcion: string | null;
+    activo: boolean;
+    colegio: {
+        id: number;
+    nombre: string;
+    provincia: string;
+    localidad: string;
+    denominacion: string;
+    naturaleza: string;
+    comedor: boolean;
+    concierto: boolean;
+    email: string;
+    web: string;
+    descripcion: string | null;
+    direccion: string;
+    telefono: string;
+    localizacion: any; 
+    codigo: string;
+    activo: boolean;
+    desactivaciones: number;
+    }
+}

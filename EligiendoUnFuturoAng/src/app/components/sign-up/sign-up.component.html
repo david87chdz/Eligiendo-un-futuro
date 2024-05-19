@@ -1,0 +1,51 @@
+<div class="header-princ">
+  <app-navbar></app-navbar>
+</div>
+<div class="content-wrapper">
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <p class="title">Registrarse</p>
+    <p class="message">Regístrate ahora y obtén acceso completo a nuestra aplicación. Los campos marcados con * son
+      obligatorios</p>
+
+    <div class="flex">
+      <label>
+        <input required placeholder type="text" class="input" formControlName="name">
+        <span>Nombre*</span>
+      </label>
+
+      <label>
+        <input required placeholder type="text" class="input" formControlName="surname">
+        <span>Apellidos</span>
+      </label>
+    </div>
+
+    <label>
+      <input required placeholder type="email" class="input" formControlName="email">
+      <span>Email*</span>
+    </label>
+
+    <label>
+      <input required placeholder type="password" class="input" formControlName="password">
+      <span>Contraseña*</span>
+    </label>
+
+    <label>
+      <input required placeholder type="password" class="input" formControlName="passwordConfirm">
+      <span>Confirmar contraseña*</span>
+    </label>
+
+    <label>
+      <select formControlName="rol" class="input" required>
+        <option value="" disabled selected>Selecciona un rol</option>
+        <option *ngFor="let role of roles" [value]="role">
+          {{role === 'School' ? 'Colegio' : (role === 'User' ? 'Usuario' : role)}}
+        </option>
+      </select>
+      <span>Rol*</span>
+    </label>
+
+    <button class="submit">Enviar</button>
+    <p class="signin">¿Ya tienes una cuenta? <a [routerLink]="['/login']" routerLinkActive="router-link-active">Iniciar
+        sesión</a></p>
+  </form>
+</div>

@@ -1,0 +1,225 @@
+ .school-details {
+   width: 70%;
+   margin: 0 auto;
+   padding: 20px;
+   border: 3px solid rgb(64, 153, 144);
+   border-radius: 10px;
+   background-color: rgba(255, 255, 255, 0.7);
+   box-shadow: 5px, 5px, 5px, 5px rgb(64, 153, 144, 0.5);
+   overflow: hidden;
+ }
+
+ .school-details h1 {
+
+   margin-bottom: 10px;
+   color: rgb(64, 153, 144);
+   font-weight: bolder;
+   font-size: 2em;
+ }
+
+
+
+
+ h3 {
+   color: rgb(64, 153, 144);
+   font-weight: bolder;
+   font-size: 1.5em;
+ }
+
+ h4 {
+   color: black;
+   font-weight: bolder;
+   font-size: 1.2em;
+ }
+
+ a {
+   color: royalblue;
+ }
+
+ .school-details p {
+   margin-bottom: 5px;
+ }
+
+ .comments-section {
+   margin-top: 20px;
+
+
+ }
+
+ .comment {
+   margin-bottom: 15px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #fff;
+   color: black;
+ }
+
+ .comment h4 {
+   margin-top: 10px;
+ }
+
+ .comment-button {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background-color: rgb(64, 153, 144);
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 8em;
+   box-sizing: border-box;
+ }
+
+ .comment-button:hover {
+   background-color: rgba(61, 121, 115, 0.9);
+   color: black;
+   box-shadow: 5px 3px 3px 3px rgb(64, 153, 144, 0.5);
+ }
+
+ .evaluations-section {
+   margin-top: 20px;
+ }
+
+ .evaluation {
+   margin-bottom: 10px;
+ }
+
+ .rating-button {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background-color: rgb(64, 153, 144);
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   width: 8em;
+   box-sizing: border-box;
+ }
+
+ .rating-button:hover {
+   background-color: rgba(61, 121, 115, 0.9);
+   color: black;
+   box-shadow: 5px 3px 3px 3px rgb(64, 153, 144, 0.5);
+ }
+
+ .activities-section,
+ .images-section,
+ .map-section {
+   margin-top: 20px;
+ }
+
+ .images-section img {
+   width: 90%;
+   height: 80%;
+   border-radius: 5px;
+ }
+
+ img {
+   width: auto;
+   height: auto;
+   margin: auto;
+ }
+
+ app-map {
+   height: 400px;
+
+ }
+
+ iframe {
+   width: 100%;
+   height: 400px;
+   border: none;
+ }
+
+
+ h5 {
+   color: #d9106e;
+   font-weight: bolder;
+ }
+
+ .loader {
+   margin: auto;
+   position: relative;
+   height: 200px;
+   width: 200px;
+   border-bottom: 3px solid #ff3d00;
+   box-sizing: border-box;
+   animation: drawLine 2s linear infinite;
+ }
+
+ .loader:before {
+   content: "";
+   position: absolute;
+   left: calc(100% + 14px);
+   bottom: -6px;
+   width: 16px;
+   height: 100px;
+   border-radius: 20px 20px 50px 50px;
+   background-repeat: no-repeat;
+   background-image: linear-gradient(#ff3d00 6px, transparent 0),
+     linear-gradient(45deg, rgba(0, 0, 0, 0.02) 49%, white 51%),
+     linear-gradient(315deg, rgba(0, 0, 0, 0.02) 49%, white 51%),
+     linear-gradient(to bottom, #ffffff 10%, #ff3d00 10%, #ff3d00 90%, #ffffff 90%);
+   background-size: 3px 3px, 8px 8px, 8px 8px, 16px 88px;
+   background-position: center bottom, left 88px, right 88px, left top;
+   transform: rotate(25deg);
+   animation: pencilRot 2s linear infinite;
+ }
+
+ @keyframes drawLine {
+
+   0%,
+   100% {
+     width: 0px
+   }
+
+   45%,
+   55% {
+     width: 200px
+   }
+ }
+
+ @keyframes pencilRot {
+
+   0%,
+   45% {
+     bottom: -6px;
+     left: calc(100% + 14px);
+     transform: rotate(25deg);
+   }
+
+   55%,
+   100% {
+     bottom: -12px;
+     left: calc(100% + 16px);
+     transform: rotate(220deg);
+   }
+ }
+
+ @media (min-width: 656px) and (max-width: 1024px) {
+   .school-details {
+     width: 80%;
+   }
+ }
+
+ @media (min-width: 360px) and (max-width: 655px) {
+   .header-princ {
+     margin: 9em;
+   }
+
+   .school-details {
+     width: 80%;
+   }
+ }
+
+
+ @media (max-width: 359px) {
+   .header-princ {
+     margin-bottom: 12em;
+   }
+
+   .school-details {
+     width: 90%;
+   }
+ }

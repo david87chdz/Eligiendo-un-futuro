@@ -1,0 +1,36 @@
+
+Para crear un diagrama de casos de uso con PlantUML, puedes seguir un enfoque similar al que usarías para otros tipos de diagramas. Aquí tienes un ejemplo básico de cómo podrías representar un diagrama de casos de uso con PlantUML:
+
+plantuml
+Copy code
+@startuml
+
+left to right direction
+
+actor Usuario as user
+actor Administrador as admin
+
+rectangle Sistema {
+    usecase "Iniciar Sesión" as login
+    usecase "Buscar Colegio" as search
+    usecase "Agregar Comentario" as add_comment
+    usecase "Ver Colegio" as view_school
+    usecase "Administrar Colegio" as manage_school
+    usecase "Gestionar Usuarios" as manage_users
+    usecase "Cerrar Sesión" as logout
+
+    user --> login
+    user --> search
+    user --> add_comment
+    user --> view_school
+
+    admin --> manage_school
+    admin --> manage_users
+
+    login --> (view_school)
+    add_comment --> (view_school)
+    manage_school --> (view_school)
+    manage_users --> (view_school)
+}
+
+@enduml

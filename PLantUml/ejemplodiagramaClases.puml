@@ -1,0 +1,42 @@
+@startuml
+
+class Biblioteca {
+    -nombre: string
+    -direccion: string
+    -libros: Libro[]
+    +agregarLibro(libro: Libro): void
+    +buscarLibro(titulo: string): Libro
+}
+
+class Libro {
+    -titulo: string
+    -autor: string
+    -editorial: string
+    -anioPublicacion: int
+    -disponible: boolean
+    +getTitulo(): string
+    +getAutor(): string
+    +getEditorial(): string
+    +getAnioPublicacion(): int
+    +isDisponible(): boolean
+    +prestar(): void
+    +devolver(): void
+}
+
+class Usuario {
+    -nombre: string
+    -apellido: string
+    -dni: string
+    -librosPrestados: Libro[]
+    +getNombre(): string
+    +getApellido(): string
+    +getDni(): string
+    +prestarLibro(libro: Libro): void
+    +devolverLibro(libro: Libro): void
+}
+
+Biblioteca -- Libro: contiene
+Usuario -- Libro: presta
+Biblioteca -- Usuario: registrado
+
+@enduml

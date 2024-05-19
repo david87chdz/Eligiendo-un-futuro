@@ -1,0 +1,23 @@
+.card {
+  max-width: 80%;
+  margin: 20px auto;
+  background-color: rgba(127, 255, 212, 0.5);
+}
+
+.card h1 {
+  text-align: center;
+}
+
+
+@media (min-width: 360px) and (max-width: 655px) {
+  .header-princ {
+    margin: 9em;
+  }
+}
+
+
+@media (max-width: 359px) {
+  .header-princ {
+    margin-bottom: 18em;
+  }
+}

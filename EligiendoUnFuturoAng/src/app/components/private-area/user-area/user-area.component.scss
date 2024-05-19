@@ -1,0 +1,225 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(127, 255, 212, 0.5);
+  border: 3px solid rgb(64, 153, 144);
+}
+
+.header-princ {
+  margin-bottom: 3em;
+}
+
+.welcome-section {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button-card {
+  flex: 1 1 auto;
+}
+
+.form-section,
+.image-upload-section,
+.comments-section,
+.activity-section {
+  margin-bottom: 20px;
+}
+
+
+
+button {
+  background-color: rgb(64, 153, 144);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1em;
+}
+
+button:hover {
+  background-color: turquoise;
+  color: black;
+}
+
+.p-button-success-princ {
+  background-color: rgb(64, 153, 144);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 10em;
+  height: 8em;
+}
+
+.p-button-success:hover {
+  background-color: turquoise;
+  color: black;
+}
+
+.p-button-rounded {
+  border-radius: 20px;
+}
+
+
+
+.response-dialog {
+  max-width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-card {
+    flex: 0 0 auto;
+  }
+
+  .activity-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button,
+  .p-button-success,
+  .p-button-warning {
+    width: 100%;
+  }
+
+  .header-princ {
+    margin-bottom: 13em;
+  }
+}
+
+.wide-input {
+  width: 80%;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+
+
+.comment-card {
+  margin-bottom: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.comment-content {
+  margin-bottom: 10px;
+}
+
+.edit-comment-form {
+  display: flex;
+  align-items: center;
+}
+
+.edit-comment-input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+}
+
+.comment-buttons {
+  margin-left: auto;
+}
+
+.answer-card {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.answer-content {
+  margin-bottom: 10px;
+}
+
+
+.evaluation-card {
+  margin-bottom: 20px;
+}
+
+.evaluation-content {
+  margin-bottom: 10px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.evaluation-actions {
+  display: flex;
+  align-items: center;
+}
+
+.evaluation-buttons {
+  margin-left: auto;
+}
+
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+h2 {
+  color: rgb(64, 153, 144);
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+h4 {
+  color: rgb(64, 153, 144);
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+h3 {
+  color: black;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+hr{
+  border: 3px solid black;
+  margin: 1em;
+}

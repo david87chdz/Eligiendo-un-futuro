@@ -1,0 +1,33 @@
+Listado de rutas de carpetas para el volumen Nuevo vol
+El número de serie del volumen es 36A1-B6F0
+D:.
++---app
+¦   +---components
+¦   ¦   +---home
+¦   ¦   +---login
+¦   ¦   +---maps
+¦   ¦   ¦   +---map
+¦   ¦   +---private-area
+¦   ¦   ¦   +---admin-area
+¦   ¦   ¦   +---college-area
+¦   ¦   ¦   +---user-area
+¦   ¦   +---rating-modal
+¦   ¦   +---reset-password
+¦   ¦   +---schools
+¦   ¦   ¦   +---school-detail
+¦   ¦   ¦   +---school-list
+¦   ¦   +---sign-up
+¦   +---guards
+¦   +---interceptors
+¦   +---interfaces
+¦   +---pipes
+¦   +---services
+¦   +---shared
+¦       +---footer
+¦       +---navbar
++---assets
+    +---i18n
+    +---img
+    ¦   +---schools
+    ¦   +---web
+    +---json

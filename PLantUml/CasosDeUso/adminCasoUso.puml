@@ -1,0 +1,67 @@
+@startuml
+
+left to right direction
+
+actor Administrador as admin
+
+rectangle Sistema {
+    usecase "Iniciar Sesión" as login
+    usecase "Ir a Zona de Administración" as go_to_admin_area
+    usecase "Ver Colegios" as view_schools
+    usecase "Buscar Colegios" as search_schools
+    usecase "Ir al Detalle del Colegio" as go_to_school_detail
+    usecase "Escribir Comentario" as write_comment
+    usecase "Valorar Colegio" as rate_school
+    usecase "Ver Usuarios" as view_users
+    usecase "Solicitudes Nuevos Colegios" as view_new_schools
+    usecase "Crear Colegio" as create_school
+    usecase "Borrar Colegio" as delete_school
+    usecase "Ver Comentarios" as view_comments
+    usecase "Ver Imágenes" as view_images
+    usecase "Desactivar Comentario" as deactivate_comment
+    usecase "Activar Comentario" as activate_comment
+    usecase "Borrar Comentario" as delete_comment
+    usecase "Desactivar Imagen" as deactivate_image
+    usecase "Activar Imagen" as activate_image
+    usecase "Borrar Imagen" as delete_image
+    usecase "Desactivar Usuario" as deactivate_user
+    usecase "Activar Usuario" as activate_user
+    usecase "Borrar Usuario" as delete_user
+}
+
+admin --> login
+
+login --> go_to_admin_area
+login --> view_schools
+
+
+view_schools --> search_schools
+view_schools --> go_to_school_detail
+
+search_schools --> go_to_school_detail
+
+go_to_school_detail --> write_comment
+go_to_school_detail --> rate_school
+
+go_to_admin_area --> view_users
+go_to_admin_area --> view_new_schools
+go_to_admin_area --> view_comments
+go_to_admin_area --> view_images
+
+
+view_images --> deactivate_image
+view_images --> activate_image
+view_images --> delete_image
+
+view_comments --> deactivate_comment
+view_comments --> activate_comment
+view_comments --> delete_comment
+
+view_users --> deactivate_user
+view_users --> activate_user
+view_users --> delete_user
+
+view_new_schools --> create_school
+view_new_schools --> delete_school
+
+@enduml

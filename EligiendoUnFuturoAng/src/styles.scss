@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* styles.css */
+@import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import 'node_modules/primeng/resources/themes/saga-blue/theme.css';
+@import 'node_modules/primeng/resources/primeng.min.css';
+@import '~leaflet/dist/leaflet.css';
+@import '~primeicons/primeicons.css';
+
+//@import 'primeng-custom.css'; /* Asegúrate de que la ruta a tu archivo CSS personalizado es correcta */
+html, body {  
+    height: 100%;
+    --opacidad-negro: 0.4;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url('./assets/img/web/arcoiris2.jpg');
+  
+  background-size: cover;
+    
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.primeng.p-button {
+   border-radius: 3px;
+}
+
+
+.swal2-popup {
+  
+  background: rgb(64, 153, 144, 0.9) !important;
+  color: white;
+  font-weight: bolder;
+  border: 8px solid white !important; 
+  border-color: 4px solid rgb(64, 153, 144) !important;
+  border-radius: 3em;
+}
+
+.swal2-confirm {
+  background-color: turquoise !important;
+  color: rgb(64, 153, 144);
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+
+.swal2-cancel {
+  background-color: #ff0066 !important; 
+  color: #fff;
+}
+
+/* Cambiar el color del ícono de éxito */
+.swal2-icon.swal2-success .swal2-success-ring {
+  border-color: turquoise !important; 
+}
+
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
+  background-color: turquoise !important; 
+}
+
+
+

@@ -1,0 +1,19 @@
+@startuml
+
+[*] --> UsuarioRegistraColegio
+
+UsuarioRegistraColegio --> ControladoresFront : RegistroNuevoColegio
+ControladoresFront --> ServiciosAngular : SolicitaRegistroNuevoColegio
+ServiciosAngular --> ControladoresRest : EnviaDatosRegistroNuevoColegio
+ControladoresRest --> Servicios : SolicitaCreacionColegio
+Servicios --> Repositorios : VerificaDatosExisten
+Repositorios --> Hibernate : ConsultaExistenciaDatos
+Hibernate --> MySQL : ConsultaExistenciaDatos
+MySQL --> Hibernate : RespuestaConsulta
+Hibernate --> Repositorios : RespuestaConsulta
+Repositorios --> Servicios : RespuestaConsulta
+Servicios --> ControladoresRest : RespuestaConsulta
+ControladoresRest --> ControladoresFront : RespuestaConsulta
+ControladoresFront --> Usuario : MuestraResultadoRegistro
+
+@enduml

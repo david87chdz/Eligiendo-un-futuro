@@ -1,0 +1,60 @@
+@startuml
+
+left to right direction
+
+actor Usuario
+
+rectangle Sistema {
+    usecase "Registrarse como Usuario" as register_user
+    usecase "Registrarse como Colegio" as register_school
+    usecase "Iniciar Sesión" as login
+    usecase "Ir a Zona Privada" as go_to_private_area
+    usecase "Modificar Datos" as modify_data
+    usecase "Borrar Cuenta" as delete_account
+    usecase "Ver Comentarios" as go_to_comments
+    usecase "Modificar Comentarios" as modify_comments
+    usecase "Borrar Comentarios" as delete_comments
+    usecase "Ver Valoraciones" as go_to_ratings
+    usecase "Modificar Valoraciones" as modify_ratings
+    usecase "Borrar Valoraciones" as delete_ratings
+    usecase "Ir a Zona de Colegios" as go_to_school_area
+    usecase "Buscar Colegios" as search_schools
+    usecase "Ir al Detalle del Colegio" as go_to_school_detail
+    usecase "Escribir Comentario" as write_comment
+    usecase "Valorar Colegio" as rate_school
+    usecase "Mirar Diagrama Caso de Uso de Colegio" as view_school_usecase_diagram
+}
+
+Usuario --> register_user
+Usuario --> register_school
+Usuario --> login
+
+register_school --> view_school_usecase_diagram
+register_user --> login
+
+login --> go_to_private_area
+go_to_private_area --> modify_data
+go_to_private_area --> delete_account
+go_to_private_area --> go_to_comments
+go_to_private_area --> go_to_ratings
+
+go_to_comments --> modify_comments
+go_to_comments --> delete_comments
+
+
+go_to_ratings --> modify_ratings
+go_to_ratings --> delete_ratings
+
+go_to_private_area --> go_to_school_area
+
+go_to_school_area --> search_schools
+go_to_school_area --> go_to_school_detail
+
+
+search_schools --> go_to_school_detail
+
+go_to_school_detail --> write_comment
+go_to_school_detail --> rate_school
+
+@enduml
+

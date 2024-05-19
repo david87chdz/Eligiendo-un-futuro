@@ -1,0 +1,52 @@
+@startuml
+
+left to right direction
+
+actor Colegio as school
+
+rectangle Sistema {
+    usecase "Iniciar Sesión" as login
+    usecase "Ver Todos los Colegios" as view_all_schools
+    usecase "Área Privada" as private_area
+    usecase "Borrar Cuenta" as delete_account
+    usecase "Buscar Colegio" as search_school
+    usecase "Detalles de Colegio" as school_details
+    usecase "Descripción" as description
+    usecase "Comentarios" as comments
+    usecase "Imágenes" as images
+    usecase "Actividades" as activities
+    usecase "Añadir Actividad" as add_activity
+    usecase "Crear Nueva Actividad" as create_new_activity
+    usecase "Seleccionar Actividad Existente" as select_existing_activity
+    usecase "Borrar Actividad" as delete_activity
+    usecase "Añadir Imágenes" as add_images
+    usecase "Borrar Imágenes" as delete_images
+    usecase "Respuestas" as reply_comments
+    usecase "Modificar Respuesta" as modify_reply
+    usecase "Borrar Respuesta" as delete_reply
+    usecase "Añadir respuesta" as add_reply
+    
+    school --> login
+    login --> view_all_schools
+    view_all_schools --> search_school
+    view_all_schools --> school_details
+    search_school --> school_details
+    login --> private_area
+    private_area --> description
+    private_area --> activities
+    private_area --> images
+    private_area --> comments
+    private_area --> delete_account
+    activities --> add_activity
+    add_activity --> create_new_activity
+    add_activity --> select_existing_activity
+    activities --> delete_activity
+    images --> add_images
+    images --> delete_images
+    comments -- add_reply
+    comments --> reply_comments
+    reply_comments --> modify_reply
+    reply_comments --> delete_reply
+}
+
+@enduml

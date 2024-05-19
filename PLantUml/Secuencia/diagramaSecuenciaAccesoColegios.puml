@@ -1,0 +1,60 @@
+@startuml
+
+actor Usuario
+participant AngularApp
+participant AngularService
+participant SpringBootController
+participant SpringBootService
+participant SpringBootRepository
+database MySQL
+participant Hibernate
+
+User -> AngularApp: Acceder a la lista de colegios
+activate AngularApp
+AngularApp -> AngularService: Solicitar lista de colegios
+activate AngularService
+AngularService -> SpringBootController: Solicitar lista de colegios
+activate SpringBootController
+SpringBootController -> SpringBootService: Solicitar lista de colegios
+activate SpringBootService
+SpringBootService -> SpringBootRepository: Consultar lista de colegios
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Consultar lista de colegios en la base de datos
+activate Hibernate
+Hibernate -> MySQL: Consultar lista de colegios en la base de datos
+deactivate Hibernate
+SpringBootRepository --> SpringBootService: Lista de colegios
+deactivate SpringBootRepository
+SpringBootService --> SpringBootController: Lista de colegios
+deactivate SpringBootService
+SpringBootController --> AngularService: Lista de colegios
+deactivate SpringBootController
+AngularService --> AngularApp: Lista de colegios
+deactivate AngularService
+deactivate AngularApp
+
+User -> AngularApp: Seleccionar un colegio
+activate AngularApp
+AngularApp -> AngularService: Solicitar datos del colegio seleccionado
+activate AngularService
+AngularService -> SpringBootController: Solicitar datos del colegio seleccionado
+activate SpringBootController
+SpringBootController -> SpringBootService: Solicitar datos del colegio seleccionado
+activate SpringBootService
+SpringBootService -> SpringBootRepository: Consultar datos del colegio seleccionado
+activate SpringBootRepository
+SpringBootRepository -> Hibernate: Consultar datos del colegio seleccionado en la base de datos
+activate Hibernate
+Hibernate -> MySQL: Consultar datos del colegio seleccionado en la base de datos
+deactivate Hibernate
+SpringBootRepository --> SpringBootService: Datos del colegio seleccionado
+deactivate SpringBootRepository
+SpringBootService --> SpringBootController: Datos del colegio seleccionado
+deactivate SpringBootService
+SpringBootController --> AngularService: Datos del colegio seleccionado
+deactivate SpringBootController
+AngularService --> AngularApp: Datos del colegio seleccionado
+deactivate AngularService
+deactivate AngularApp
+
+@enduml

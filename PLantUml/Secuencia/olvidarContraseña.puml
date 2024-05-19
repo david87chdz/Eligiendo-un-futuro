@@ -1,0 +1,23 @@
+@startuml
+
+[*] --> ProgramaIniciado
+
+ProgramaIniciado --> ControladoresFront : UsuarioOlvidaContrasena
+ControladoresFront --> Express : SolicitaRecuperacionContrasena
+Express --> BaseDeDatos : ConsultaUsuario
+BaseDeDatos --> Express : RespuestaConsulta
+Express --> ServicioEmail : EnviaEmailConToken
+ServicioEmail --> UsuarioEmail : EnvioExitoso
+UsuarioEmail --> ControladoresFront : RespuestaEnvioEmail
+
+ControladoresFront --> Express : UsuarioRecibeToken
+Express --> ServicioEmail : VerificaToken
+ServicioEmail --> Express : TokenVerificado
+Express --> ControladoresFront : TokenVerificado
+
+ControladoresFront --> Express : UsuarioCambiaContrasena
+Express --> BaseDeDatos : ActualizaContrasena
+BaseDeDatos --> Express : ContrasenaActualizada
+Express --> ControladoresFront : ContrasenaActualizada
+
+@enduml

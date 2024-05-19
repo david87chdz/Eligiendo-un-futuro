@@ -1,0 +1,78 @@
+@startuml
+
+package "entities" {
+    class Actividad
+    class Colegio
+    class Comentario
+    class Imagen
+    class Oferta
+    class Respuesta
+    class Rol
+    class Usuario
+    class Valoracion
+}
+
+package "controllers" {
+    class ActividadController
+    class ColegioController
+    class ComentarioController
+    class ImagenController
+    class OfertaController
+    class RespuestaController
+    class RolController
+    class UsuarioController
+    class ValoracionController
+}
+
+package "services" {
+    class ActividadService
+    class ColegioService
+    class ComentarioService
+    class ImagenService
+    class OfertaService
+    class RespuestaService
+    class RolService
+    class UsuarioService
+    class ValoracionService
+}
+
+package "repositories" {
+    class ActividadRepository
+    class ColegioRepository
+    class ComentarioRepository
+    class ImagenRepository
+    class OfertaRepository
+    class RespuestaRepository
+    class RolRepository
+    class UsuarioRepository
+    class ValoracionRepository
+}
+
+ActividadController --> ActividadService
+ActividadService --> ActividadRepository
+
+ColegioController --> ColegioService
+ColegioService --> ColegioRepository
+
+ComentarioController --> ComentarioService
+ComentarioService --> ComentarioRepository
+
+ImagenController --> ImagenService
+ImagenService --> ImagenRepository
+
+OfertaController --> OfertaService
+OfertaService --> OfertaRepository
+
+RespuestaController --> RespuestaService
+RespuestaService --> RespuestaRepository
+
+RolController --> RolService
+RolService --> RolRepository
+
+UsuarioController --> UsuarioService
+UsuarioService --> UsuarioRepository
+
+ValoracionController --> ValoracionService
+ValoracionService --> ValoracionRepository
+
+@enduml
