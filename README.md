@@ -112,10 +112,10 @@ node .\api.js
 ```
 ## License-
 
-Distributed under the GNU GPLv3 License. See LICENSE for more information.
+Distributed under the GNU 2.0 License. See LICENSE for more information.
 
 ## Contacto
 
 david87chdz@gmail.com
 
-Project Link: https://github.com/yourusername/choosing-a-future
+Project Link: https://github.com/david87chdz/eligiendo-un-futuro

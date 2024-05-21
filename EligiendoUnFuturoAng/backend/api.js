@@ -19,13 +19,7 @@ const MI_EMAIL = 'david87chdz@gmail.com';
 
 
 const nodemailer = require('nodemailer');
-/* const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'eligiendounfuturo@gmail.com', // Tu dirección de correo electrónico de Gmail
-    pass: '@1205aldCM' // Tu contraseña de Gmail
-  }
-}); */
+
 
 app.use(cors());
 app.use(express.json());
